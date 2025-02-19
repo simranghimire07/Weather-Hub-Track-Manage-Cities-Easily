@@ -1,0 +1,22 @@
+@use '../abstracts/variables' as *;
+
+.card{
+        background-color: $surface;
+        color: $on-surface;
+}
+
+.card-lg{
+        border-radius: $radius-extra-large;
+        padding: 20px;
+}
+
+.card-sm{
+        border-radius: $radius-large;
+        padding: 16px;
+}
+
+.heading{
+        color: $white;
+        font-size: 5.6rem;
+        line-height: 1.1;
+} 

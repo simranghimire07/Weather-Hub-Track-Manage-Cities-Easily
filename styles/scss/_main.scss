@@ -1,6 +1,10 @@
 @use './abstracts/mixins' as *;
 @use './abstracts/variables' as *;
-@use './components/aside' as *;
+@use './components/style' as *;
+@use './layouts/header' as *;
+@use './components/card' as *;
+@use './layouts/current-weather-card' as *;
+@use './layouts/forecast-card' as *;
 
 * {
         margin: 0;
@@ -8,14 +12,73 @@
         box-sizing: border-box;
 }
 
-body {
-        font-family: 'Figtree', sans-serif;
-        background-color: $backgroundColor;
+li{
+        list-style: none;
 }
 
-.container {
-        max-width: 1600px;
+
+a,
+img,
+span,
+button,
+input{
+        display: block;
+}
+
+
+a{
+        text-decoration: none;
+        color: inherit;
+}
+
+img{
+        height: auto;
+}
+
+input,
+button{
+        background: none;
+        border: none;
+        font: inherit;
+        color: inherit;
+}
+
+input{
         width: 100%;
-        // margin-inline: auto;
-        padding: 16px;
+}
+
+button{
+        cursor: pointer;
+}
+
+html{
+        scroll-behavior: smooth;
+}
+body {
+        font-family: 'Figtree', sans-serif;
+        background-color: $background;
+        color: $on-background;
+        overflow: hidden;
+        font-size: 1.6rem;
+        // height: 300vh;
+}
+
+:focus-visible{
+        outline: 2px solid $white;
+        outline-offset: 2px;
+}
+
+::selection{
+        background-color: $white-alpha-8;
+}
+
+
+::-webkit-scrollbar{
+        width: 6px;
+        height: 6px; /*for horizontal scrollbar*/
+}
+
+::-webkit-scrollbar-thumb{
+        background-color: $white-alpha-8;
+        border-radius: $radius-pill;
 }

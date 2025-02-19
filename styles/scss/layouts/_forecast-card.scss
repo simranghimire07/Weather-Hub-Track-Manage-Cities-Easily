@@ -1,0 +1,23 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+.forecast-card {
+        :is(.card-item, .icon-wrapper) {
+            @include flex(row, flex-start, center);
+        }
+    
+        .card-item:not(:last-child) {
+            margin-bottom: 12px;
+        }
+
+        .icon-wrapper{
+                gap: 8px;
+        }
+
+        .label-1{
+                color: $on-surface-variant;
+                width: 100%;
+                text-align: right;
+        }
+}
+    
