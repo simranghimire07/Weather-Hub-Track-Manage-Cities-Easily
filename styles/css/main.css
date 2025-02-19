@@ -1,0 +1,71 @@
+@import url("https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Mona+Sans:ital,wght@0,200..900;1,200..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+.weather-container {
+  max-width: 400px;
+  background: linear-gradient(to top, #FFDDB5, #61A4E6, #1E4DC5);
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+.weather-container .search-box {
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  padding: 10px;
+}
+.weather-container .weather-info img {
+  display: block;
+  margin: 0 auto;
+}
+.weather-container .weather-info h2 {
+  font-size: 40px;
+  font-weight: bold;
+}
+.weather-container .weather-info p {
+  color: #FFFFFF;
+}
+.weather-container .divider {
+  color: #FFFFFF;
+  border: 1px solid #FFFFFF;
+}
+.weather-container .details p {
+  color: #FFFFFF;
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 0;
+}
+.weather-container .stats {
+  padding: 15px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+.weather-container .stats div {
+  text-align: center;
+  color: #FFFFFF;
+}
+.weather-container .stats div p:first-child {
+  font-size: 18px;
+  font-weight: bold;
+}
+.weather-container .stats div p:last-child {
+  font-size: 12px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Figtree", sans-serif;
+  background-color: #FFFFFF;
+}
+
+.container {
+  max-width: 1600px;
+  width: 100%;
+  padding: 16px;
+}
+
+/*# sourceMappingURL=main.css.map */

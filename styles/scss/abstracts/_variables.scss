@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Mona+Sans:ital,wght@0,200..900;1,200..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+// background-color
+$backgroundColor: #FFFFFF;
+
+// gray-variant
+$gray900: #212121;
+$gray800: #333333;
+$gray700: #616161;
+
+// blue-variant
+$blue900: #1E4DC5;
+$blue600:#2F80ED;
+$blue400: #61A4E6;
+
+// neutral-variant
+$neutral600: #FFDDB5;
+
+
+// fonts
+$fontSizes: (
+  0: 0,
+  1: 10px,
+  2: 12px,
+  3: 14px,
+  4: 16px,
+  5: 18px,
+  6: 20px,
+  6_5: 22px,
+  7: 24px,
+  7_5: 26px,
+  8: 32px,
+  8_25: 36px,
+  8_5: 38px,
+  9: 48px,
+  10: 64px,
+  11: 72px,
+);
+
+// space
+$space: (
+  0: 0,
+  0_5: 2px,
+  1: 4px,
+  2: 8px,
+  3: 12px,
+  4: 16px,
+  5: 20px,
+  6: 24px,
+  7: 28px,
+  8: 32px,
+  9: 36px,
+  10: 40px,
+  11: 44px,
+  12: 48px,
+  13: 52px,
+  14: 56px,
+  15: 60px,
+  16: 64px,
+  17: 128px,
+);
+
+// border-radius
+$radius: (
+  default: 4px,
+  small: 8px,
+  medium: 12px,
+  large: 16px,
+  extraLarge: 20px,
+  circle: 50%,
+);
+
+// breakpoints
+$breakpoints: (
+  'sm': 640px,
+  'md': 768px,
+  'lg': 1024px,
+  'xl': 1280px
+);

@@ -1,0 +1,21 @@
+@use './abstracts/mixins' as *;
+@use './abstracts/variables' as *;
+@use './components/aside' as *;
+
+* {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+}
+
+body {
+        font-family: 'Figtree', sans-serif;
+        background-color: $backgroundColor;
+}
+
+.container {
+        max-width: 1600px;
+        width: 100%;
+        // margin-inline: auto;
+        padding: 16px;
+}

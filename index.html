@@ -4,8 +4,61 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Weather Hub- Track & Manage Cities Easily</title>
+        <meta name="title" content="Weather Hub- Track & Manage Cities Easily">
+        <meta name="description" content="Weather Hub is a web application that allows users to track and manage cities easily.">
+        <meta name="keywords" content="Weather Hub, Weather, Hub, Track, Manage, Cities, Easily">
+        <!-- Tailwind CDN -->
+        <script src="https://cdn.tailwindcss.com"></script>
+        <!-- Custome CSS -->
+        <link rel="stylesheet" href="styles/css/main.css">
+
 </head>
-<body>
-        
+<body>  
+        <header>
+                <aside>
+                        <div class="container">
+                                <div class="search-view" data-search-view>
+                                        <div class="search-wrapper">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-search"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+                                                <input type="search" name="search" class="search-field" placeholder="Search city ..." autocomplete="off" data-search-field>
+
+                                                <button class="btn-icon leading-icon has-state" aria-label="close search" data-search-toggle>
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-left"><path d="m12 19-7-7 7-7"/><path d="M19 12H5"/></svg>
+                                                        
+                                                </button>
+                                        </div>
+
+                                        <div class="search-result" data-search-result>
+                                                <ul class="view-list" data-search-list>
+                                                        <li class="view-item">
+                                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-map-pin"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg>
+                                                                
+                                                                <div>
+                                                                        <p class="item-title">Kathmandu</p>
+                                                                        <p class="item-subtitle">Bagmati, Nepal</p>
+                                                                </div>
+                                                                <a href="#" class="item-link has-state" data-search-toggle></a>
+                                                        </li>
+                                                </ul>
+                                        </div>
+
+                                        <div class="header-actions">
+                                                <button class="btn-icon has-state" aria-label="open search" data-search-toggle>
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-search"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+                                                </button>
+
+                                                <a href="#/current-location" class="btn-primary has-state" data-current-location-btn>
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-locate-fixed"><line x1="2" x2="5" y1="12" y2="12"/><line x1="19" x2="22" y1="12" y2="12"/><line x1="12" x2="12" y1="2" y2="5"/><line x1="12" x2="12" y1="19" y2="22"/><circle cx="12" cy="12" r="7"/><circle cx="12" cy="12" r="3"/></svg>
+                                                        <span class="span">Current Location</span>
+                                                </a>
+                                        </div>
+                                </div>
+                        </div>
+                </aside>
+        </header>
+        <main>
+                <article class="container">
+                </article>
+        </main>
 </body>
 </html>
