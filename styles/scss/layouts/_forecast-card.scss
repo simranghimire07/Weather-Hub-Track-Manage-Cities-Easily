@@ -20,4 +20,20 @@
                 text-align: right;
         }
 }
+
+@media (min-width: 768px){
+        .forecast-card{
+                .card-item:not(:last-child){
+                       margin-block-end: 16px;
+                }
+        }
+}
+
+@media (min-width: 1200px){
+        .forecast-card{
+                .title-2{
+                        font-size: 2.2rem;
+                }
+        }
+}
     

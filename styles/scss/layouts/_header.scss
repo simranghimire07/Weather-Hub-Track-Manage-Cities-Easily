@@ -8,7 +8,7 @@
 }
 
 .logo img{
-        width: 150px;
+        width: 50px;
 }
 
 .header .container,
@@ -134,4 +134,114 @@
        position: absolute;
         inset: 0;
         box-shadow: none;
+}
+
+@media (min-width: 768px){
+        .header-actions{
+                gap: 24px;
+        }
+
+        .header .btn-primary{
+                padding-inline: 16px 24px
+        }
+
+        .header .btn-primary .span{
+                display: block;
+        }
+
+        .search-view{
+                clip-path: circle(3% at calc(100% - 273px) 6%);
+        }
+}
+
+@media (min-width: 1200px){
+        .header{
+                position: relative;
+                height: 120px;
+                z-index: 4;
+
+                .btn-icon{
+                        display: none;
+                }
+
+                .container{
+                        padding-block: 0;
+                        height: 100%;
+                }
+        }
+        .logo img{
+                width: 200px;
+        }
+
+        .search-view{
+
+                &.active{
+                        all: unset;
+                        display: block;
+                        position: relative;
+                        width: 500px;
+                        animation: none;
+                }
+
+                .view-list{
+                        position: absolute;
+                        top: 100%;
+                        left: 0;
+                        width: 100%;
+                        max-height: 360px;
+                        border-radius: 0 0 $radius-extra-large $radius-extra-large;
+                        border-block-start: 1px solid $outline;
+                        overflow-y: auto;
+                        overflow-y: overlay;
+
+                        &:empty{
+                                min-height: 120px;
+                        }
+
+                        &::-webkit-scrollbar-button{
+                                height: 20px;
+                        }
+                }
+                &:is(:hover, :has(.view-list):hover){
+                        filter: drop-shadow(0px 1px 3px hsla(0, 0%, 0%, 0.5));
+                }
+
+                &:is(:focus-within, :has(.view-list):focus-within){
+                        filter: drop-shadow(0px 3px 6px hsla(0, 0%, 0%, 0.4));
+                }
+
+        }
+
+        .search-wrapper{
+                border-block-end: none;
+
+                .search-icon{
+                        display: block;
+                }
+        }
+
+        .search-field,
+        .search-view .view-list{
+                background-color: $surface;
+        }
+
+        .search-field{
+                height: 56px;
+                border-radius: $radius-extra-large;
+        }
+
+        .search-result,
+        .search-view:not(:focus-within).search-result{
+                display: none;
+        }
+
+        .search-view:focus-within .search-result.active{
+                display: block;
+        }
+
+        .search-view:has(.search-result.active):focus-within .search-field{
+                border-bottom-left-radius: 0;
+                border-bottom-right-radius: 0;
+
+        }
 }

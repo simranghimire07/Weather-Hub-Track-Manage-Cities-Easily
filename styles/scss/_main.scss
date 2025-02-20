@@ -5,6 +5,10 @@
 @use './components/card' as *;
 @use './layouts/current-weather-card' as *;
 @use './layouts/forecast-card' as *;
+@use './layouts/highlight-detail-card' as *;    
+@use './components/loading' as *;
+@use './components/404-error' as *;
+
 
 * {
         margin: 0;
@@ -58,9 +62,9 @@ body {
         font-family: 'Figtree', sans-serif;
         background-color: $background;
         color: $on-background;
-        overflow: hidden;
+        // overflow: hidden;
         font-size: 1.6rem;
-        // height: 300vh;
+        height: 300vh;
 }
 
 :focus-visible{

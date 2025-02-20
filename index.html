@@ -12,17 +12,21 @@
         <!-- Custome CSS -->
         <link rel="stylesheet" href="styles/css/main.css">
 
+        <!-- js -->
+         <script src="js/app.js" type="module"></script>
+         <script type="module" src="js/route.js"></script>
+
 </head>
 <body>  
         <header class="header">        
                 <div class="container">
                         <a href="#" class="logo">
-                                <img src="assets/logo.svg" height="58" width="134" alt="logo">
+                                <img src="assets/logo.svg" height="58" width="94" alt="logo">
                         </a>
                         <div class="search-view " data-search-view>
                                 <div class="search-wrapper">
                                         <input type="search" name="search" class="search-field " placeholder="Search city..." autocomplete="off" data-search-field>
-                                        <span class="search-icon">
+                                        <span class="search-icon leading-icon">
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-search"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
                                         </span>
 
@@ -33,21 +37,7 @@
                                         </button>
                                 </div>
 
-                                <div class="search-result" data-search-result>
-                                        <ul class="view-list" data-search-list>
-                                                <li class="view-item">
-                                                        <span class="icons">
-                                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-map-pin"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg>
-                                                        </span>
-                                                        
-                                                        <div>
-                                                                <p class="item-title">Kathmandu</p>
-                                                                <p class="item-subtitle">Bagmati, Nepal</p>
-                                                        </div>
-                                                        <a href="#" class="item-link has-state" data-search-toggle></a>
-                                                </li>
-                                        </ul>
-                                </div>
+                                <div class="search-result" data-search-result></div>
                         </div>
                         <div class="header-actions">
                                 <button class="btn-icon has-state" aria-label="open search" data-search-toggle>
@@ -56,7 +46,7 @@
                                         </span>
                                 </button>
 
-                                <a href="#/current-location" class="btn-primary has-state" data-current-location-btn    >
+                                <a href="#/current-location" class="btn-primary has-state" data-current-location-btn>
                                         <span class="icons">
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-locate-fixed"><line x1="2" x2="5" y1="12" y2="12"/><line x1="19" x2="22" y1="12" y2="12"/><line x1="12" x2="12" y1="2" y2="5"/><line x1="12" x2="12" y1="19" y2="22"/><circle cx="12" cy="12" r="7"/><circle cx="12" cy="12" r="3"/></svg>
                                         </span>
@@ -66,124 +56,32 @@
                 </div>
         </header>
         <main>
-                <article class="container">
+                <article class="container" data-container>
                         <div class="left-content">
-                                <section class="section current-weather" aria-label="current weather" data-current-weather>
-                                         <div class="card card-lg current-weather-card">
-                                                <h2 class="card-title">Now</h2>
-                                                <div class="wrapper">
-                                                        <p class="heading">
-                                                                25&deg;<sup>c</sup>
-                                                        </p>
-
-                                                        <img src="assets/Weather Icon.svg" width="64" height="64" alt="weather icon" class="weather-icon">
-                                                </div>
-
-                                                <p class="text-2xl font-semibold capitalize">Overcast clouds</p>
-                                                <ul class="meta-list">
-                                                        <li class="meta-item">
-                                                                <span class="icons">
-                                                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-calendar"><path d="M8 2v4"/><path d="M16 2v4"/><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M3 10h18"/></svg>   
-                                                                </span>
-                                                                <p class="meta-text text-2xl">Thursday 16, Feb</p>
-                                                        </li>
-
-                                                        <li class="meta-item">
-                                                                <span class="icons">
-                                                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-map-pin"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg>
-                                                                </span>
-                                                                <p class="meta-text text-2xl">Kathmandu, Nepal</p>
-                                                        </li>
-                                                </ul>
-                                         </div>
-                                </section>
+                                <section class="section current-weather" aria-label="current weather" data-current-weather></section>
 
 
-                                <section class="section weather-forecast" aria-labelledby="weather-forecast" data-5-days-weather-forecast>
-                                        <h2 class="text-3xl mb-3" id="forecast-label">5 Days Forecast</h2>
-
-                                        <div class="card card-lg forecast-card">
-                                                <ul>
-                                                        <li class="card-item">
-
-                                                                <div class="icon-wrapper">
-                                                                        <img src="assets/night cloud.svg" width="36" height="36" alt="weather icon" class="weather-icon">
-
-                                                                        <span class="span">
-                                                                                <p class="text-3xl mb-3">25</p>
-                                                                        </span>
-                                                                </div>
-
-                                                                <p class="label-1 text-2xl font-semibold">17 Feb</p>
-                                                                <p class="label-1 text-2xl font-semibold">Friday</p>
-                                                        </li>
-
-                                                        <li class="card-item">
-
-                                                                <div class="icon-wrapper">
-                                                                        <img src="assets/night cloud.svg" width="36" height="36" alt="weather icon" class="weather-icon">
-
-                                                                        <span class="span">
-                                                                                <p class="text-3xl mb-3">25</p>
-                                                                        </span>
-                                                                </div>
-
-                                                                <p class="label-1 text-2xl font-semibold">17 Feb</p>
-                                                                <p class="label-1 text-2xl font-semibold">Friday</p>
-                                                        </li>
-
-                                                        <li class="card-item">
-
-                                                                <div class="icon-wrapper">
-                                                                        <img src="assets/night cloud.svg" width="36" height="36" alt="weather icon" class="weather-icon">
-
-                                                                        <span class="span">
-                                                                                <p class="text-3xl mb-3">25</p>
-                                                                        </span>
-                                                                </div>
-
-                                                                <p class="label-1 text-2xl font-semibold">17 Feb</p>
-                                                                <p class="label-1 text-2xl font-semibold">Friday</p>
-                                                        </li>
-
-                                                        <li class="card-item">
-
-                                                                <div class="icon-wrapper">
-                                                                        <img src="assets/night cloud.svg" width="36" height="36" alt="weather icon" class="weather-icon">
-
-                                                                        <span class="span">
-                                                                                <p class="text-3xl mb-3">25</p>
-                                                                        </span>
-                                                                </div>
-
-                                                                <p class="label-1 text-2xl font-semibold">17 Feb</p>
-                                                                <p class="label-1 text-2xl font-semibold">Friday</p>
-                                                        </li>
-
-                                                        <li class="card-item">
-
-                                                                <div class="icon-wrapper">
-                                                                        <img src="assets/night cloud.svg" width="36" height="36" alt="weather icon" class="weather-icon">
-
-                                                                        <span class="span">
-                                                                                <p class="text-3xl mb-3">25</p>
-                                                                        </span>
-                                                                </div>
-
-                                                                <p class="label-1 text-2xl font-semibold">17 Feb</p>
-                                                                <p class="label-1 text-2xl font-semibold">Friday</p>
-                                                        </li>
-
-                                                </ul>
-                                        </div>
-                                </section>
+                                <section class="section weather-forecast" aria-labelledby="weather-forecast" data-5-days-weather-forecast></section>
                         </div>
 
 
                         <div class="right-content">
-                                
+                               <section class="section highlight-details" aria-labelledby="highlights-label" data-highlight-details></section> 
+
+                                <section class="section hourly-forecast" aria-label="hourly forecast" data-hourly-forecast></section>
                         </div>
+
+
+                        <div class="loading" data-loading></div>
                 </article>
         </main>
+
+        <section class="error-content" data-error-content>
+                <h2 class="heading">404</h2>
+                <p class="text-4xl body-1">Page not found</p>
+                <a href="#/weather?lat=51.5073219&lon=0.1276474" class="btn-primary">
+                        <span class="span">Go Home</span>
+                </a>
+        </section>
 </body>
 </html>

@@ -81,9 +81,38 @@
 
 }
 
-// .icons{
-//         height: 1em;
-//         width: 1em;
-//         color: $white;
-//         overflow: hidden;
-// }       
+.fade-in{
+        animation: fade-in 250ms ease forwards;
+}
+
+@keyframes fade-in{
+        0% {
+                opacity: 0;
+        }
+        100% {
+                opacity: 1;
+        }
+}
+
+
+@media (min-width: 768px){
+        .container{
+                padding: 24px;
+        }
+        .title-1 {
+                font-size: 1.8rem;
+        }
+
+        .section > .title-1{
+               margin-block-end: 16px;
+        }
+}
+
+@media (min-width: 1200px){
+       .container{
+                padding: 40px;
+       } 
+       .title-1 {
+                font-size: 2.4rem;
+        }
+}
