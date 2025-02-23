@@ -375,16 +375,19 @@ export const updateWeather = function (lat, lon){
                                 li.classList.add("[card-item]");
 
                                 li.innerHTML = `
+                                <div class="content-wrapper">
                                         <div class="icon-wrapper">
                                                 <img src="assets/weather_icons/${icon}.png" width="36" height="36" alt="${description}" class="weather-icon" title="${description}">
 
                                                 <span class="span">
-                                                        <p class="text-3xl mb-3 title-2">${parseInt(temp_max)}&deg;</p>
+                                                         <p class="text-3xl title-2">${parseInt(temp_max)}&deg;</p>
                                                 </span>
                                         </div>
-
-                                        <p class="label-1 text-2xl font-semibold">${date.getDate()} ${module.monthNames[date.getUTCMonth()]}</p>
-                                        <p class="label-1 text-2xl font-semibold">${module.weekDayNames[date.getUTCDay()]}</p>
+                                        <div class="label-container">
+                                                <p class="label-1 text-2xl font-semibold">${date.getDate()} ${module.monthNames[date.getUTCMonth()]}</p>
+                                                <p class="label-1 text-2xl font-semibold day-name">${module.weekDayNames[date.getUTCDay()]}</p>
+                                        </div>
+                                </div>
                                 `;
                                 forecastSection.querySelector("[data-forecast-list]").appendChild(li);
 

@@ -8,7 +8,7 @@
 }
 
 .logo img{
-        width: 50px;
+        width: 80px;
 }
 
 .header .container,
@@ -119,9 +119,8 @@
 
         .view-item{
                 position: relative;
-                height: 56px;
                 @include flex(row, flex-start, center);
-                gap: 16px;
+                gap: 10px;
                 padding: 16px 24px;
         }
 
@@ -170,7 +169,7 @@
                 }
         }
         .logo img{
-                width: 200px;
+                width: 120px;
         }
 
         .search-view{

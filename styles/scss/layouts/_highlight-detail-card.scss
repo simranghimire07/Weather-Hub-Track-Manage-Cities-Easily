@@ -3,15 +3,10 @@
 
 .highlight-details{
         overflow: visible; 
-        // .icons{
-        //         width: 52px;
-        //         height: 52px;
-        // }
 }
 
 .highlight-detail-list{
         display: grid;
-        // gap: 20px;   
 
         .title{
                 color: $on-surface-variant;
@@ -137,6 +132,7 @@
         }
         .highlight-detail-list{
                 grid-template-columns: 1fr 1fr;
+                gap: 16px;
         }
 
         .highlight-card{
@@ -153,6 +149,10 @@
                 width: 25%;
                 flex-direction: column-reverse;
                 gap: 4px;
+        }
+
+        .highlight-card.two .card-item{
+               justify-content: flex-start;
         }
 
         .slider-container{

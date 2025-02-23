@@ -1,39 +1,61 @@
 @use '../abstracts/variables' as *;
 @use '../abstracts/mixins' as *;
 
+
 .forecast-card {
-        :is(.card-item, .icon-wrapper) {
-            @include flex(row, flex-start, center);
+        .card-item {
+            @include flex(row, space-between, center);
+            width: 100%;
+
+            .card-item:not(:last-child) {
+                margin-bottom: 12px;
+            }
+        }
+
+        .content-wrapper { 
+            @include flex(row, space-between, center); 
+            width: 100%;
+            gap: 26px;
+            margin-bottom: 22px;
+
         }
     
-        .card-item:not(:last-child) {
-            margin-bottom: 12px;
+        .icon-wrapper {
+            @include flex(row, flex-start, center);
+            gap: 8px;
+            flex: 1;
         }
+    
+        .label-container {
+            @include flex(row,center, center);
+            text-align: center;
+            gap: 16px;
+            flex: 2; 
 
-        .icon-wrapper{
-                gap: 8px;
         }
-
         .label-1{
                 color: $on-surface-variant;
-                width: 100%;
+        }
+
+        .day-name{
+                @include flex(row, flex-end, center);
+                flex: 1; 
                 text-align: right;
         }
+    }
+
+@media (min-width: 768px) {
+    .forecast-card {
+        .card-item:not(:last-child) {
+            margin-block-end: 16px;
+        }
+    }
 }
 
-@media (min-width: 768px){
-        .forecast-card{
-                .card-item:not(:last-child){
-                       margin-block-end: 16px;
-                }
+@media (min-width: 1200px) {
+    .forecast-card {
+        .title-2 {
+            font-size: 2.2rem;
         }
+    }
 }
-
-@media (min-width: 1200px){
-        .forecast-card{
-                .title-2{
-                        font-size: 2.2rem;
-                }
-        }
-}
-    

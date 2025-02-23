@@ -30,6 +30,10 @@ article.container{
                 background-color: linear-gradient(180deg, hsla(270, 5%, 7%, 0) 0%, hsla(270, 5%, 7%, 0.8) 65%, hsl(270, 5%, 7%) 100%);
 
         }
+
+        &::-webkit-scrollbar-thumb{
+                background-color: transparent;
+        }
 }
 
 .section:not(:last-child){
